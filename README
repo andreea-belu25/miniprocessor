@@ -1,0 +1,46 @@
+Task 1
+
+I read the instruction on the keyboard. Determine n by shifting,
+determining the last bits and adding 1 (according to the statement). Display n.
+I determine how much should be shifted next to determine the operators.
+I determine the bit string for the operators and then each operator (shift +
+of the last bits). I notice that there are 4 types of operators that correspond
+each a number. I determine what kind of operator it is and display it. Finally,
+I find out how much it must be shifted to determine the size of the operands.
+
+Task 2
+
+The first part of task 2 is built with the help of the first task,
+except that the operators are added in a vector. Determination no
+of nos read according to the statement. Determine each operand, taking into account that
+their size is a power of 2 and I add it to a vector of values.
+At the end, I initialize the expression to be calculated with the first value from
+vector and change this expression into the following value from the vector and following
+operator. I display the final result of the expression.
+
+Task 3
+
+This task is similar to task 2, based approximately on the same
+reasoning, but excluding the fact that the operands can have any size
+and can be spread over 2 successive readings. To determine the operands we have
+two cases: the one in which I no longer need additional bits, in which case
+determine the grouping of bits and add it to the vector of values or the one in which
+we still need additional bits for grouping. In this case, I determine
+the rest of the unused bits from the previous no. I form a group from the remaining bits
+previously and a number of bits from the current number that I add to the vector. I find out no
+of bits used up to the current moment. Then, determine further
+groupings and add them to the value vector as long as I can do this
+(the while condition). If I can no longer make groups => I save the bits
+remain and I shift them to the left to make room for new bits from
+next number read.
+
+Task 4
+
+I built the code for this task using the code from the task
+previous. This task differs from the previous one by the precedence of operators.
+To take this into account, I made a vector of results in which
+I add current number if I encounter plus or minus or the value of an expression on
+which I calculate if I have consecutive * or /. I make a vector of operators in
+addition. At the end, I calculate the required expression by traversing the vector of results and
+on that of operators and performing the last addition and subtraction operations.
+I display the final result of the calculated expression.

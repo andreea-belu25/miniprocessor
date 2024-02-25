@@ -1,0 +1,5 @@
+arhiva.zip
+*.sh
+parse.awk
+Makefile.checker
+tests
