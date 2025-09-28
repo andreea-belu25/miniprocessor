@@ -1,46 +1,49 @@
-Task 1
+# Binary Expression Parser and Evaluator
 
-I read the instruction on the keyboard. Determine n by shifting,
-determining the last bits and adding 1 (according to the statement). Display n.
-I determine how much should be shifted next to determine the operators.
-I determine the bit string for the operators and then each operator (shift +
-of the last bits). I notice that there are 4 types of operators that correspond
-each a number. I determine what kind of operator it is and display it. Finally,
-I find out how much it must be shifted to determine the size of the operands.
+# Task 1: Basic Bit Manipulation and Operator Parsing
+This module implements keyboard input processing to extract binary-encoded expressions. The algorithm:
 
-Task 2
+Reads binary input and determines the value n through bit shifting operations
+Extracts the last significant bits and applies increment operations as specified
+Identifies operator bit patterns and maps them to their corresponding arithmetic operations (4 distinct operator types)
+Calculates the required bit shifts to determine operand sizes
+Outputs the parsed value of n and identified operators
 
-The first part of task 2 is built with the help of the first task,
-except that the operators are added in a vector. Determination no
-of nos read according to the statement. Determine each operand, taking into account that
-their size is a power of 2 and I add it to a vector of values.
-At the end, I initialize the expression to be calculated with the first value from
-vector and change this expression into the following value from the vector and following
-operator. I display the final result of the expression.
+# Task 2: Fixed-Size Operand Expression Evaluation
+Extends Task 1 functionality with vector-based storage and expression evaluation:
 
-Task 3
+Stores identified operators in a dedicated vector structure
+Processes operands with power-of-2 bit sizes according to specification requirements
+Maintains operand values in a structured vector for sequential processing
+Initializes expression evaluation with the first operand value
+Iteratively applies operators to subsequent operands in sequence
+Returns the final computed expression result
 
-This task is similar to task 2, based approximately on the same
-reasoning, but excluding the fact that the operands can have any size
-and can be spread over 2 successive readings. To determine the operands we have
-two cases: the one in which I no longer need additional bits, in which case
-determine the grouping of bits and add it to the vector of values or the one in which
-we still need additional bits for grouping. In this case, I determine
-the rest of the unused bits from the previous no. I form a group from the remaining bits
-previously and a number of bits from the current number that I add to the vector. I find out no
-of bits used up to the current moment. Then, determine further
-groupings and add them to the value vector as long as I can do this
-(the while condition). If I can no longer make groups => I save the bits
-remain and I shift them to the left to make room for new bits from
-next number read.
+# Task 3: Variable-Size Operand Processing
+Advanced implementation supporting arbitrary operand bit lengths:
 
-Task 4
+Handles operands with non-power-of-2 sizes that may span multiple input reads
+Implements two-case bit processing logic:
 
-I built the code for this task using the code from the task
-previous. This task differs from the previous one by the precedence of operators.
-To take this into account, I made a vector of results in which
-I add current number if I encounter plus or minus or the value of an expression on
-which I calculate if I have consecutive * or /. I make a vector of operators in
-addition. At the end, I calculate the required expression by traversing the vector of results and
-on that of operators and performing the last addition and subtraction operations.
-I display the final result of the calculated expression.
+Case 1: Sufficient bits available for complete operand grouping
+Case 2: Requires additional bits from subsequent reads for operand completion
+
+
+Manages bit remainder handling through left-shifting operations to accommodate new input bits
+Utilizes iterative grouping algorithms with conditional processing loops
+Maintains bit usage tracking throughout the parsing process
+
+# Task 4: Operator Precedence Expression Evaluation
+Comprehensive expression evaluator with mathematical operator precedence:
+
+Inherits core functionality from Task 3 with enhanced precedence handling
+Implements separate result and operator vector storage systems
+Processes multiplication and division operations with immediate evaluation
+Defers addition and subtraction operations for final precedence-correct evaluation
+Executes two-phase evaluation:
+
+High-precedence operations (multiplication/division) during parsing
+Low-precedence operations (addition/subtraction) in final traversal
+
+
+Outputs precedence-compliant expression results
