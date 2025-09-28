@@ -1,4 +1,4 @@
-#Binary Expression Parser and Evaluator
+# **Binary Expression Parser and Evaluator**
 
 #Task 1: Basic Bit Manipulation and Operator Parsing
 This module implements keyboard input processing to extract binary-encoded expressions. The algorithm:
