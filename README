@@ -1,6 +1,6 @@
-# Binary Expression Parser and Evaluator
+#Binary Expression Parser and Evaluator
 
-# Task 1: Basic Bit Manipulation and Operator Parsing
+#Task 1: Basic Bit Manipulation and Operator Parsing
 This module implements keyboard input processing to extract binary-encoded expressions. The algorithm:
 
 Reads binary input and determines the value n through bit shifting operations
@@ -9,7 +9,7 @@ Identifies operator bit patterns and maps them to their corresponding arithmetic
 Calculates the required bit shifts to determine operand sizes
 Outputs the parsed value of n and identified operators
 
-# Task 2: Fixed-Size Operand Expression Evaluation
+#Task 2: Fixed-Size Operand Expression Evaluation
 Extends Task 1 functionality with vector-based storage and expression evaluation:
 
 Stores identified operators in a dedicated vector structure
@@ -19,7 +19,7 @@ Initializes expression evaluation with the first operand value
 Iteratively applies operators to subsequent operands in sequence
 Returns the final computed expression result
 
-# Task 3: Variable-Size Operand Processing
+#Task 3: Variable-Size Operand Processing
 Advanced implementation supporting arbitrary operand bit lengths:
 
 Handles operands with non-power-of-2 sizes that may span multiple input reads
@@ -33,7 +33,7 @@ Manages bit remainder handling through left-shifting operations to accommodate n
 Utilizes iterative grouping algorithms with conditional processing loops
 Maintains bit usage tracking throughout the parsing process
 
-# Task 4: Operator Precedence Expression Evaluation
+#Task 4: Operator Precedence Expression Evaluation
 Comprehensive expression evaluator with mathematical operator precedence:
 
 Inherits core functionality from Task 3 with enhanced precedence handling
